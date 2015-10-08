@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>ALKALIVE</title>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="max-container" ng-app>
+	<!-- script facebook -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- fin script facebook -->
+	<!-- header -->
+	<div class="container--img">
+		<h1 class="esteH1">Tres gotitas que te<br> cambian la vida</h1>
+		<div class="jardin">
+			<div class="chicos desde-tablet">
+			</div>
+		</div>
+		<div class="ruleta">
+			<div class = 'circulo left-circulo'></div>
+  			<div class = 'circulo right-circulo'></div>
+		</div>
+		<div class = 'overlay'>
+			<img src="img/pack.png" alt="">
+			<div class="fb-like" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count" style="position:absolute; z-index: 99999; top: -5.5em"></div>
+		</div>
+	</div>
+	<div class="onda desde-web"></div>
+	<div class="contenedor--principal"><!-- CONTENEDOR PRINCIPAL -->
+
+		<!-- FORMULARIO -->
+		<div class="formulario">
+			<span class="btn-llamar"></span>
+			<div class="formulario--top">
+				<img src="img/operadora.png" alt="">
+				<div class="llamar">
+					<h2>LLAMANOS AL<br>(011) 3723-1948</h2>
+					<p>Atención especializada</p>
+				</div>
+			</div>
+			
+			<form action="form.php" method="post" id="formValid" name="formulario" ng-submit="formulario.$valid" novalidate>
+				<img src="img/logo.svg" alt="logo">
+				<p>PEDILO Y EMPEZÁ EL CAMBIO</p>
+				<input type="text" placeholder="NOMBRE" ng-model="nombre" name="nombre" ng-minlength="2" required>
+				<div ng-if="formulario.nombre.$error.minlength" class="inputError">
+					<ul>
+						<li data-tool="Completa este campo con tu nombre">Completa este campo con tu nombre</li>
+					</ul>
+				</div>
+				<input type="email" placeholder="E-MAIL" ng-model="email" name="email" ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/" required>
+				<div ng-if="formulario.email.$error.pattern" class="inputError">
+					<ul>
+						<li>Coloca un correo valido</li>
+					</ul>
+				</div>
+				<div class="inputs">
+					<input type="number" placeholder="COD. AREA" name="cod" data-tool="ejemplo 011" ng-model="cod" ng-maxlength="5" ng-minlength="2" required>
+					<div ng-if="formulario.cod.$error.minlength" class="inputError2">
+						<ul>
+							<li>El código es muy corto</li>
+						</ul>
+					</div>
+					<div ng-if="formulario.cod.$error.maxlength" class="inputError2">
+						<ul>
+							<li>El código es muy largo</li>
+						</ul>
+					</div>
+					<input type="number" placeholder="TELÉFONO" name="telefono" ng-model="telefono" ng-minlength="6" required>
+					<div ng-if="formulario.telefono.$error.minlength" class="inputError2" name="este">
+						<ul>
+							<li>Colocar un teléfono valido</li>
+						</ul>
+					</div>
+				</div>
+				<button ng-disabled="formulario.$invalid">ENVIAR</button>
+			</form>
+		</div>
+		<!-- FORMULARIO    FIN     -->
+
+		<!-- PASOS -->
+		<div class="contenedor--pasos desde-web">
+			<div class="contenedor--pasos--box"><div class="boton">1</div><h2>¿DOLORES ARTICULARES?</h2></div>
+			<div class="contenedor--pasos--box"><div class="boton">2</div><h2>¿FALTA ENERGÍA?</h2></div>
+			<div class="contenedor--pasos--box"><div class="boton">3</div><h2>¿AGOTAMIENTO?</h2></div>
+			<div class="contenedor--pasos--box"><div class="boton">4</div><h2>¿ACIDEZ?</h2></div>
+		</div>
+		<!-- FIN DE PASOS -->
+		<!-- INFO -->
+		<div class="contenedor--info desde-web" id="acordeon">
+			<div class="acordeon__contenedor">
+					<h2>¿Sabías que todos estos síntomas pueden manifestarse si estás<br> alterando tu pH sanguíneo por llevar una dieta ácida?<span class="plus plusMas" ></span></h2>
+
+					<p>Viví más y mejor. Descubrí Alkalive. El novedoso suplemento que posee una novedosa fórmula diseñada especialmente con componentes 100 % naturales que regulan los niveles de pH en el cuerpo, estabilizándolos a la perfección: lo principal para prevenir todo tipo de enfermedades y disfrutar de una vida larga y saludable.</p>
+
+					<h2>La importancia de un pH estable.<span class="plus" ></span></h2>
+
+					<p>La forma en la que se vive y la mala alimentación juegan un papel fundamental en el aumento o la disminución del pH corporal y algunos alimentos son más alcalinos que otros. Un cuerpo ácido es un imán para diversas enfermedades, afecciones y, sobre todo, para acelerar el envejecimiento.</p>
+
+					<h2>¿Qué es el pH?<span class="plus" ></span></h2>
+
+					<p>El pH es una medida de la acidez o de la alcalinidad de una sustancia. Un pH por debajo de 7 es considerado ácido y por encima de 7 se considera alcalino. El pH ideal del cuerpo humano debe ser ligeramente alcalino, oscilar entre el 7.35 y el 7.45.<br>
+EL BALANCE ÁCIDO-ALCALINO ES FUNDAMENTAL PARA LA SALUD</p>
+			</div>
+		</div> <!-- FIN INFO -->
+		<div class="contenedor--productos desde-tablet"><!-- PRODUCTOS -->
+			<h2>¿Sabías que muchos de los alimentos que consumimos diariamente<br> pueden ser el principio de un pH desbalanceado?</h2>
+			<div class="contenedor--productos--info">
+				<div class="info--caja">
+					<div class="info--img numero1"></div>
+					<p>Café</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero2"></div>
+					<p>Carne</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero3"></div>
+					<p>Mate</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero4"></div>
+					<p>Leche</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero5"></div>
+					<p>Queso</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero6"></div>
+					<p>Harinas refinadas</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero7"></div>
+					<p>Alcohol</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero8"></div>
+					<p>Alimentos procesados</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero9"></div>
+					<p>Manteca</p>
+				</div>
+				<div class="info--caja">
+					<div class="info--img numero10"></div>
+					<p>Azúcar</p>
+				</div>
+			</div>
+		</div><!-- FIN DE PRODUCTOS -->
+
+		<div class="contenedor--queEsPh desde-tablet"><!-- QUE ES PH -->
+			<h2>¿Qué es la ACIDOSIS CRÓNICA?</h2>
+			<p>La acidosis crónica es una condición muy común que afecta a una gran cantidad de personas en la actualidad. Cuando nuestros cuerpos experimentan un desequilibrio del pH, muchas cuestiones relacionadas con la salud comienzan a tener un efecto negativo en nuestro bienestar. Esto puede producir fatiga, pérdida de la formación de hueso, inflamación, hipertensión arterial, aumento del colesterol, envejecimiento acelerado, entre muchas otras enfermedades.</p>
+			<h3>Síntomas comunes del PH ácido.</h3>
+			<div class="contenedor--queEsPh--sintomas">
+				<div class="sintomas ">
+					<li>Acné</li>
+					<li>Agitación</li>
+					<li>Dolores musculares y articulares</li>
+					<li>Manos y pies fríos</li>
+				</div>
+				<div class="sintomas sintomas2">
+					<li>Mareo</li>
+					<li>Baja energía</li>
+					<li>Sensibilidad al mal olor y los gases</li>
+					<li>Falta de deseo sexual</li>
+				</div>
+				<div class="sintomas sintomas3">
+					<li>Acidex</li>
+					<li>Diarrea</li>
+					<li>Estreñimiento</li>
+					<li>Orina caliente y olorosa</li>
+				</div>
+				<div class="sintomas sintomas4">
+					<li>Respiración acelerada</li>
+					<li>Lengua blanca</li>
+					<li>Congestión</li>
+					<li>Sabor metálico en la boca</li>
+				</div>
+			</div>
+		</div><!-- FIN QUE ES PH -->
+		<div class="contenedor--suplemento desde-tablet"><!-- CONTENEDOR SUPLEMENTO -->
+			<h3>Si bien la dieta y el ejercicio ayudan, la única manera de mantener el PH corporal equilibrado es Alkalive.</h3>
+			<h2>¿Qué es Alkalive?</h2>
+		</div>
+		<div class="contenedor--suplemento--pack">
+			<div class="contenedor--suplemento--pack--all ">
+				<div class="pack desde-web">
+					<img src="img/pack.png" alt="">
+				</div>
+				<div class="pack--info">
+					<div class="grupo--texto">
+						<h3>Es un suplemento bebible 100% NATURAL que te permite alcanzar una vida larga y saludable, porque facilita la liberación de los desechos ácidos que producen la mayoría de los alimentos.</h3>
+						<p>La fórmula de Alkalive perfecciona los niveles de pH en sangre, como si constantemente estuvieras siguiendo el proceso de una rigurosa dieta alcalina, pero sin dejar de disfrutar esas comidas que tanto te gustan. Alkalive. Si te gusta comer bien, ahora podés sentirte bien.</p>
+					</div>
+					<div class="pack--info--drcha desde-web">
+						<img src="img/gotitas.png" alt="gotas">
+						<p>SÓLO 3 GOTAS<br><span>en un vaso de agua</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="pack--logo desde-web" style="position:relative">
+				<h3>Descubrí</h3>
+				<img src="img/logo2.svg" alt="log">
+				<h3>Prevení enfermedades y mantené regulado tu pH corporal todo el año.</h3>
+				<div class="fb-like" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count" style="position:absolute; z-index: 99999; left:12%; top:1em"></div>
+			</div>
+		</div><!-- FIN CONTENEDOR SUPLEMENTO -->
+		<div class="contenedor--testimonios"><!-- CONTENEDOR TESTIMONIOS -->
+			<h2>Ellos eligen una vida más larga y saludable con Alkalive:</h2>
+			<div class="contenedor--testimonios--personas">
+				<div class="testimonios">
+					<div class="testimonios--foto"></div>
+					<div class="testimonios--texto">
+						<h4>Susana, 62 años. San Juan.</h4>
+						<p>"Sinceramente, yo no estaba al tanto de lo importante que es mantener estable el pH corporal. Es más ¡ni sabía lo que era el pH! Fue entonces cuando empecé a preocuparme porque la acidez estomacal me ocurría con mayor frecuencia. Mi marido había estudiado mucho sobre el tema y me comentó que el problema podría estar en el pH. Inmediatamente me puse a buscar soluciones y encontré Alkalive ¡Es increíble como sólo tres gotitas le pueden hacer tan bien al cuerpo! Ya no tengo acidez, duermo y me siento mejor todo el día, con mucha más energía y lo más importante: mi pH corporal está perfectamente regulado ¡No exagero cuando digo que este producto me cambió la vida!".</p>
+					</div>
+				</div>
+				<div class="testimonios desde-tablet">
+					<div class="testimonios--foto foto2"></div>
+					<div class="testimonios--texto">
+						<h4>Carlos, 55 años. San Juan.</h4>
+						<p>“Soy de esas personas a las que no les gusta privarse de nada: pizza, asados, un cervecita con amigos… Pero con el paso de los años mi nivel de pH se fue desbalanceando. Afortunadamente, unos de mis mejores amigos que trabaja en el rubro de la salud desde hace 20 años, me recomendó Alkalive. Tengo que confesar que es lo más novedoso que vi. No conozco ningún otro producto con una fórmula que colabore tan bien con la regulación del pH corporal. Es ideal para los que buscan un cambio positivo en sus vidas”.</p>
+					</div>
+				</div>
+			</div>
+			<p class="esteTexto desde-tablet">*Los resultados pueden variar de persona a persona. **Para mantener la privacidad del usuario, la foto no corresponde a quien brindó su testimonio.<br>***Los testimonios y comentarios de nuestros clientes son verídicos, redactados por cada uno de ellos y certificados ante escribano público.</p>
+		</div><!-- FIN CONTENEDOR TESTIMONIOS -->
+		<div class="contenedor--formulario"><!-- FORMULARIO FOOTER -->
+			<h2>NO TE DEJES ESTAR. PREVENÍ ENFERMEDADES.</h2>
+			<h3>Viví más y mejor. Alkalive es tu mejor aliado.</h3>
+			<form method="post" id="formValid" action="form.php" class= "form" name="formulario2" novalidate>
+				<div class="formulario--footer">
+					<input type="text" placeholder="NOMBRE" ng-model="nombre2" name="nombre2" ng-minlength="2" required>
+					<div ng-if="formulario2.nombre2.$error.minlength" class="inputError2">
+						<ul>
+							<li>Completa este campo con tu nombre</li>
+						</ul>
+					</div>
+					<input type="email" placeholder="E-MAIL" ng-model="email2" name="email2" ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/" required>
+					<div ng-if="formulario2.email2.$error.pattern" class="inputError2">
+						<ul>
+							<li>Coloca un correo valido</li>
+						</ul>
+					</div>
+				</div>
+				<div class="formulario--footer">
+					<input type="number" placeholder="COD. AREA EJ.: (011)" name="cod2" data-tool="ejemplo 011" ng-model="cod2" ng-maxlength="5" ng-minlength="2" required>
+					<div ng-if="formulario2.cod2.$error.minlength" class="inputError2">
+						<ul>
+							<li>El código es muy corto</li>
+						</ul>
+					</div>
+					<div ng-if="formulario2.cod2.$error.maxlength" class="inputError2">
+						<ul>
+							<li>El código es muy largo</li>
+						</ul>
+					</div>
+					<input type="number" placeholder="TELÉFONO" name="telefono2" ng-model="telefono2" ng-minlength="6" required>
+					<div ng-if="formulario2.telefono2.$error.minlength" class="inputError2">
+						<ul>
+							<li>Colocar un teléfono valido</li>
+						</ul>
+					</div>
+				</div>
+				<button ng-disabled="formulario2.$invalid">CONSULTAR</button>
+			</form>
+			<p>Hacenos tu consulta, es totalmente privada. Nuestros expertos se contactarán a la brevedad </p>
+		</div><!-- FIN FORMULARIO FOOTER -->
+		<div class="contenedor--semi">
+			<div class="contenedor--semi--footer">
+				<img src="img/icon-telefonista.png" alt="">
+				<p>(011) 3723-1948<br>Conseguilo exclusivamente<br>por venta telefónica.</p>
+				<img src="img/icon-reloj.png" alt="">
+				<p>Atención<br>de 7 a 23 hs.</p>
+				<img src="img/icon-auto.png" alt="">
+				<p>Envíos a domicilio<br>en todo el país.</p>
+				<img src="img/icon-tarjeta.png" alt="">
+				<p>Aceptamos<br>todas las tarjetas.</p>
+			</div>
+		</div>
+	</div> <!-- FIN CONTENEDOR PRINCIPAL -->
+	<footer>
+		<div class="footer">
+			<p>Ante la menor duda consulte a su médico y/o farmacéutico. <a href="politicasdeprivacidad.html">TÉRMINOS, CONDICIONES Y POLÍTICAS DE PRIVACIDAD</a> ALKALIVE Copyright © 2015 - All Rights Reserved - Todos los derechos Reservados</p>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
